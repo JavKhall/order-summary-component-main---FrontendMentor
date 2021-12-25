@@ -8,25 +8,23 @@
 	--DarkBlue: hsl(223, 47%, 23%);
 }
 
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	height: 100vh;
+	background-image: url(images/pattern-background-desktop.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
 	background-color: var(--PaleBlue);
 	font-family: 'Red Hat Display', sans-serif;
-}
-
-/* Configuracion de imagen de fondo */
-.imagen-fondo {
-	background: url(images/pattern-background-desktop.svg) no-repeat top;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	z-index: -1;
 }
 
 /* Configuracion general de la tarjeta*/
@@ -40,6 +38,7 @@ body {
 	border-radius: 20px;
 	text-align: center;
 	box-shadow: 0px 30px 30px -20px var(--DesaturatedBlue);
+	transition: .5s ease-in-out;
 }
 
 /* Configuracion de la imagen de la tarjeta*/
@@ -164,10 +163,16 @@ body {
 	color: var(--DarkBlue);
 }
 
+/*================================================*/
 /* Configuracion de pagina para moviles */
 @media screen and (max-width: 480px) {
+	body {
+		background-image: url(images/pattern-background-mobile.svg);
+	}
+	
 	/* Ajuste de tamaño general de la tarjeta */
 	.card {
+		transition: .5s ease-in-out;
 		width: 330px;
 		height: 575px;
 	}
@@ -191,18 +196,6 @@ body {
 	.card-proceed {
 		margin: 10px 16px;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 } 
 
 
